@@ -8,8 +8,6 @@ def main():
     with open("new_exotic.txt", 'w', encoding='utf-8') as p:
         p.write(text)
         print(p)
-    f.close()
-    p.close()
     return 0
 
 
