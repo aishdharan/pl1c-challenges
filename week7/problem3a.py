@@ -1,32 +1,23 @@
 import random
 import sys
 
-"""
-Notes/Questions:
-- What happens if bases is a string?
-- Try and make seq a string instead of a list of strings
-- Otherwise you're on the right track.
-"""
-
 
 def main():
     bases = ['A', 'T', 'G', 'C']
     seq = "".join(random.choices(bases, k=100))  # Good!
     print("Given sequence =", seq)
     print("Length of sequence =", len(seq))
-    # fixme: we only need k to be 3 to 7
-    #   start by solving the problem for k=3; the rest will follow
 
     kmer1_file = open("kmer1.txt", "w")
     for k in range(3, 4):
         kmer1_file.write("k =" + str(k) + "\n" + "%s %17s" % (f'{k}-mer', 'count') + "\n" + '-' * 25 + "\n")
 
-    for value in range(len(seq) - k + 1):
-        val_k = seq[value: value + k]
-        kmer_count = seq.count(val_k)
-        kmer1_file.write("%s %16s" % (val_k, kmer_count) + "\n")
-    kmer1_file.write("=" * 25)
-    kmer1_file.close()
+        for value in range(len(seq) - k + 1):
+            val_k = seq[value: value + k]
+            kmer_count = seq.count(val_k)
+            kmer1_file.write("%s %16s" % (val_k, kmer_count) + "\n")
+        kmer1_file.write("=" * 25)
+        kmer1_file.close()
 
     kmer2_file = open("kmer2.txt", "w")
     for k in range(4, 5):
@@ -69,10 +60,7 @@ def main():
         kmer5_file.write("=" * 25)
         kmer5_file.close()
 
-    # return os.X_OK
-    # https://docs.python.org/3/library/os.html#os.X_OK
-    # I don't think this is what you want
-    return 0  # if running on Windows
+    return 0
 
 
 if __name__ == "__main__":
