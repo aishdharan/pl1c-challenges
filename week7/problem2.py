@@ -8,11 +8,14 @@ def main():
         for line in f_read:
             mat_line = line.split()
             # mat_a[mat_line] = []
-            # print(mat_line)
-
-        for i in range(0, len(f_read), 3):
-            mat_format = mat_line[:3]
+            #print(mat_line)
+            #print(line)
+            mat_format = line[:8].split()
             print(mat_format)
+
+            #for i in range(0, len(f_read), 3):
+             #   mat_format = mat_line[:3]
+              #  print(mat_format)
 
         # struggling in this
         # steps:
