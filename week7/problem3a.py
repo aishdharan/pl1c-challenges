@@ -1,6 +1,12 @@
 import random
 import sys
 
+"""
+Notes:
+- Good attempt!
+- I've added inline notes indicating repetition
+- In what way is the string manipulation different from what we learned in class?
+"""
 
 def main():
     bases = ['A', 'T', 'G', 'C']
@@ -8,8 +14,11 @@ def main():
     print("Given sequence =", seq)
     print("Length of sequence =", len(seq))
 
+    # todo: instead of explicitly writing the output to each file is there a better way?
+    # fixme: in what way can you break the functionality for reuse and avoid needless repetition?
     kmer1_file = open("kmer1.txt", "w")
     for k in range(3, 4):
+        # note: the syntax below is not what was introduced in class
         kmer1_file.write("k =" + str(k) + "\n" + "%s %17s" % (f'{k}-mer', 'count') + "\n" + '-' * 25 + "\n")
 
         for value in range(len(seq) - k + 1):

@@ -1,5 +1,10 @@
 import sys
 
+"""
+Notes:
+- Please refer to the question again. The original challenge was Week 4, problem 3. 
+"""
+
 
 def main():
     with open("war_and_peace.txt", "r", encoding="utf-8") as f:

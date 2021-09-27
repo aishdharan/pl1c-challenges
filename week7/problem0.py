@@ -1,5 +1,10 @@
 import sys
 
+"""
+Notes:
+- If the file has been saved with a particular encoding, what should we do when reading it?
+"""
+
 
 def main():
     with open("exotic.txt", 'r') as f:

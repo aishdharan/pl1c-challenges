@@ -1,5 +1,10 @@
 import sys
 
+"""
+Notes:
+- Please complete the exercise.
+"""
+
 
 def main():
     with open("input_matrices.txt", 'r') as f:
